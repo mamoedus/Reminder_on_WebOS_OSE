@@ -1,0 +1,13 @@
+{
+  "id": "com.practice.app",
+  "version": "2.0.0",
+  "vendor": "yashin&eremenko",
+  "type": "qml",
+  "main": "main.qml",
+  "title": "Reminder",
+  "icon": "icon.png",
+  "requiredPermissions": [
+    "time.query",
+    "applications.operation"
+  ]
+}
