@@ -17,7 +17,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR args, int ncmdshow) {
 	WNDCLASS softmainclass= NewWinClass((HBRUSH) COLOR_WINDOW, LoadCursor(NULL, IDC_ARROW), hInst, LoadIcon(NULL, IDI_QUESTION),L"MainWndClass", SoftmainProc);
 	if (!RegisterClassW(&softmainclass)) { return -1; }
 	MSG SoftMainMsg = { 0 };
-	CreateWindow(L"MainWndClass", L"Íàïîìèíàíèÿ", WS_OVERLAPPEDWINDOW | WS_VISIBLE, 100, 100, 500, 250, NULL, NULL, NULL, NULL);
+	CreateWindow(L"MainWndClass", L"ÃÃ Ã¯Ã®Ã¬Ã¨Ã­Ã Ã­Ã¨Ã¿", WS_OVERLAPPEDWINDOW | WS_VISIBLE, 100, 100, 500, 250, NULL, NULL, NULL, NULL);
 	while (GetMessage(&SoftMainMsg, NULL, NULL, NULL)) {
 		TranslateMessage(&SoftMainMsg);
 		DispatchMessage(&SoftMainMsg);
@@ -40,7 +40,7 @@ LRESULT CALLBACK SoftmainProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
 		case button1_click:
 			 write(); break;
 		case button2_click:
-			MessageBoxA(hwnd, "Ñëûøü, òåáÿ òóò áûòü íå äîëæíî, òàê ÷òî äàâàé, ñòóïàé", "Â ðàçðàáîòêå", MB_OK); break;
+			MessageBoxA(hwnd, "Ð’ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐµ", "Ð’ Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐµ", MB_OK); break;
 		case button3_click:
 			system("dates1.txt"); break;
 		}
@@ -55,11 +55,11 @@ LRESULT CALLBACK SoftmainProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
 	}
 }
 void widgets(HWND hwnd) {
-	CreateWindowA("static", "Ââåäèòå äàòó è íàæàòèåì êíîïêè âûáåðèòå äåéñòâèå:", WS_VISIBLE | WS_CHILD, 5, 5, 490, 20, hwnd, NULL, NULL, NULL);
+	CreateWindowA("static", "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ Ã¨ Ã­Ã Ã¦Ã Ã²Ã¨Ã¥Ã¬ ÃªÃ­Ã®Ã¯ÃªÃ¨ Ã¢Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¤Ã¥Ã©Ã±Ã²Ã¢Ã¨Ã¥:", WS_VISIBLE | WS_CHILD, 5, 5, 490, 20, hwnd, NULL, NULL, NULL);
 	CreateWindowA("edit", "", WS_VISIBLE | WS_CHILD, 5, 30, 490, 20, hwnd, NULL, NULL, NULL);
-	CreateWindowA("button", "Äîáàâèòü Íàïîìèíàíèå", WS_VISIBLE | WS_CHILD, 5, 45, 490, 20, hwnd, (HMENU)button1_click, NULL, NULL);
-	CreateWindowA("button", "Óäàëèòü Íàïîìèíàíèå", WS_VISIBLE | WS_CHILD, 5, 70, 490, 20, hwnd, (HMENU)button2_click, NULL, NULL);
-	CreateWindowA("button", "Ïîñìîòðåòü Çàïèñè", WS_VISIBLE | WS_CHILD, 5, 95, 490, 20, hwnd, (HMENU)button3_click, NULL, NULL);
+	CreateWindowA("button", "Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ ÃÃ Ã¯Ã®Ã¬Ã¨Ã­Ã Ã­Ã¨Ã¥", WS_VISIBLE | WS_CHILD, 5, 45, 490, 20, hwnd, (HMENU)button1_click, NULL, NULL);
+	CreateWindowA("button", "Ã“Ã¤Ã Ã«Ã¨Ã²Ã¼ ÃÃ Ã¯Ã®Ã¬Ã¨Ã­Ã Ã­Ã¨Ã¥", WS_VISIBLE | WS_CHILD, 5, 70, 490, 20, hwnd, (HMENU)button2_click, NULL, NULL);
+	CreateWindowA("button", "ÃÃ®Ã±Ã¬Ã®Ã²Ã°Ã¥Ã²Ã¼ Ã‡Ã Ã¯Ã¨Ã±Ã¨", WS_VISIBLE | WS_CHILD, 5, 95, 490, 20, hwnd, (HMENU)button3_click, NULL, NULL);
 }
 using namespace std;
 void write() {
@@ -69,7 +69,7 @@ void write() {
 	string mes;
 	cin >> d >> m >> y;
 	fprintf(inp, "%d ", d); fprintf(inp, "%d ", m); fprintf(inp, "%d-", y);
-	cout << "Î ÷åì âàñ óâåäîìèòü?\n";
+	cout << "ÃŽ Ã·Ã¥Ã¬ Ã¢Ã Ã± Ã³Ã¢Ã¥Ã¤Ã®Ã¬Ã¨Ã²Ã¼?\n";
 	cin >> mes;
 	fprintf(inp, " %s\n", mes);
 
