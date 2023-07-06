@@ -7,13 +7,13 @@ using namespace std;
 string text(int strings);
 int maker(int nums) {
     int numsd = nums;
-    int govno = 0;
+    int sum = 0;
     for (int i = 0; i < nums; i++) {
-        govno += arr[i] * pow(10, numsd - 1);
+        sum += arr[i] * pow(10, numsd - 1);
         numsd--;
     }
 
-    return govno;
+    return sum;
 }
 int main() {
     // current date/time based on current system
